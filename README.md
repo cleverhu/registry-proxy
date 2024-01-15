@@ -17,7 +17,6 @@
 - ghcr.io
 - gcr.io
 - k8s.gcr.io
-- docker.cloudsmith.io
 
 ## 快速安装
 

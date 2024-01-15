@@ -115,6 +115,7 @@ var defaultConfig = configModel{
 		"kube-public",
 		"kube-node-lease",
 		"registry-proxy",
+		"cert-manager",
 	},
 	IncludeNamespaces: []string{
 		"*",

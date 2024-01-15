@@ -1,4 +1,4 @@
-IMG := ketches/registry-proxy
+IMG := deeplythink/registry-proxy
 VERSION := v1.0.0
 
 .PHONY: build
@@ -8,6 +8,7 @@ build:
 	- docker buildx use gobuilder
 	- docker buildx create --use --name gobuilder
 	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMG):$(VERSION) --push .
+	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMG):latest --push .
 
 .PHONY: deploy
 deploy:
