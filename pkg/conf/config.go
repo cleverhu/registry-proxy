@@ -100,13 +100,12 @@ type configModel struct {
 }
 
 var defaultProxies = map[string]string{
-	"docker.io":            "docker.ketches.cn",
-	"registry.k8s.io":      "k8s.ketches.cn",
-	"quay.io":              "quay.ketches.cn",
-	"ghcr.io":              "ghcr.ketches.cn",
-	"gcr.io":               "gcr.ketches.cn",
-	"k8s.gcr.io":           "k8s-gcr.ketches.cn",
-	"docker.cloudsmith.io": "cloudsmith.ketches.cn",
+	"docker.io":       "docker.cloud.sealos.io",
+	"registry.k8s.io": "k8s.cloud.sealos.io",
+	"quay.io":         "quay.cloud.sealos.io",
+	"ghcr.io":         "ghcr.cloud.sealos.io",
+	"gcr.io":          "gcr.cloud.sealos.io",
+	"k8s.gcr.io":      "k8s-gcr.cloud.sealos.io",
 }
 
 var defaultConfig = configModel{
@@ -115,6 +114,7 @@ var defaultConfig = configModel{
 		"kube-system",
 		"kube-public",
 		"kube-node-lease",
+		"registry-proxy",
 	},
 	IncludeNamespaces: []string{
 		"*",
